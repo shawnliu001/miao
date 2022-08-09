@@ -1,0 +1,116 @@
+<html>
+  <body>
+    test it out!
+  </body>
+</html>
+
+<script type="" id="ch0103/01">
+  function sum(a, b) {
+    return a + b;
+  }
+
+  const a = Number(prompt(""));
+  const b = Number(prompt());
+
+  console.log(sum(a, b));
+</script>
+
+<script id="ch0103/02">
+  const randam = (a, b, c) => (a + b) * c;
+  console.log(randam(Number(prompt()), Number(prompt()), Number(prompt())));
+</script>
+
+<script id="ch0103/03">
+  const division = (a, b, c) => Math.floor((a + b) / c);
+  console.log(division(Number(prompt()), Number(prompt()), Number(prompt())));
+</script>
+
+<script id="ch0103/04">
+  const haha = function (a, b) {
+    console.log(Math.floor(a / b), a % b);
+  };
+  haha(Number(prompt()), Number(prompt()));
+</script>
+-->
+
+<script id="ch0103/05">
+  const a = Number(prompt());
+  const b = Number(prompt());
+  const x = a / b;
+  console.log(x.toFixed(9));
+</script>
+
+<script id="ch0103/06">
+  const a = Number(prompt());
+  const b = Number(prompt());
+  const x = (b / a) * 100;
+  console.log(`${x.toFixed(3)}\%`);
+</script>
+
+<script id="ch0103/07">
+  const x = Number(prompt());
+  const a = Number(prompt());
+  const b = Number(prompt());
+  const c = Number(prompt());
+  const d = Number(prompt());
+  const f = a * x ** 3 + b * x ** 2 + c * x + d;
+  console.log(f.toFixed(7));
+</script>
+
+<script id="ch0103/08">
+  const f = Number(prompt());
+  const C = (5 * (f - 32)) / 9;
+  console.log(C.toFixed(5));
+</script>
+
+<script id="ch0103/09">
+  const r = Number(prompt());
+  const diameter = 2 * r;
+  const perimeter = 2 * r * 3.14159;
+  const s = r ** 2 * 3.14159;
+  console.log(diameter.toFixed(4), perimeter.toFixed(4), s.toFixed(4));
+</script>
+
+<script id="ch0103/10">
+  const r1 = Number(prompt());
+  const r2 = Number(prompt());
+  const R = 1 / (1 / r1 + 1 / r2);
+  console.log(R.toFixed(2));
+</script>
+
+<script id="ch0103/11">
+  const a = Number(prompt());
+  const b = Number(prompt());
+  const x = a % b;
+  console.log(x.toFixed(4));
+</script>
+
+<script id="ch0103/12">
+  const r = Number(prompt());
+  const volume = (4 / 3) * 3.14 * r ** 3;
+  console.log(volume.toFixed(2));
+</script>
+
+<script id="ch0103/13">
+  const N = Number(prompt());
+  const s = N % 10;
+  const t = Math.floor(N / 10) % 10;
+  const h = Math.floor(N / 100);
+  console.log(`${s}${t}${h}`);
+</script>
+
+<script id="ch0103/14">
+  const h = Number(prompt());
+  const r = Number(prompt());
+  const v = (3.14159 * r ** 2 * h) / 1000;
+  console.log(Math.ceil(20 / v));
+</script>
+
+<script id="ch0103/15">
+  const xa = Number(prompt());
+  const ya = Number(prompt());
+  const xb = Number(prompt());
+  const yb = Number(prompt());
+  const L = Math.sqrt((xa - xb) ** 2 + (ya - yb) ** 2);
+  console.log(L.toFixed(3));
+</script>
