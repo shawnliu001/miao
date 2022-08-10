@@ -107,10 +107,55 @@
 </script>
 
 <script id="ch0103/15">
+  const n = Number(prompt());
+  const x = Number(prompt());
+  const y = Number(prompt());
+  const appConsumed = y / x;
+  console.log(parseInt(n - appConsumed));
+</script>
+
+<script id="ch0103/16">
   const xa = Number(prompt());
   const ya = Number(prompt());
   const xb = Number(prompt());
   const yb = Number(prompt());
   const L = Math.sqrt((xa - xb) ** 2 + (ya - yb) ** 2);
   console.log(L.toFixed(3));
+</script>
+
+<script id="ch0103/17">
+  const x1 = Number(prompt());
+  const y1 = Number(prompt());
+  const x2 = Number(prompt());
+  const y2 = Number(prompt());
+  const x3 = Number(prompt());
+  const y3 = Number(prompt());
+  const line1 = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
+  const line2 = Math.sqrt((x2 - x3) ** 2 + (y2 - y3) ** 2);
+  const line3 = Math.sqrt((x1 - x3) ** 2 + (y1 - y3) ** 2);
+  const q = (line1 + line2 + line3) / 2;
+  const S = Math.sqrt(q * (q - line1) * (q - line2) * (q - line3));
+  console.log(S.toFixed(2));
+</script>
+
+<script id="ch0103/18">
+  const a = Number(prompt());
+  const b = Number(prompt());
+  const n = Number(prompt());
+
+  const nThItem = (b - a) * n + 2 * a - b;
+  console.log(nThItem);
+</script>
+
+<script id="ch0103/19">
+  const a = Number(prompt());
+  const b = Number(prompt());
+  const product = a * b;
+  console.log(product);
+</script>
+
+<script id="ch0103/20">
+  const n = Number(prompt());
+  const product = 2 ** n;
+  console.log(product);
 </script>
