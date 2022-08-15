@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>画图</title>
+    <style>
+      canvas {
+        border: 2px solid #f0f;
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="500" height="400"></canvas>
+  </body>
+  <script>
+    var canvas = document.querySelector("canvas");
+    canvas.style.imageRendering = "pixelated"; //放大时的插帧方式：不插帧，直接放大像素
+    var ctx = canvas.getContext("2d");
+
+    function dot(x, y, color = "black") {
+      x = Math.round(x);
+      y = Math.round(y);
+      ctx.fillStyle = color;
+      ctx.fillRect(x, y, 1, 1);
+    }
+    /**
+   * YOUR TASK
+      * 在 坐标 (42, 42) 画出一个点      * 
+      * 画一条实线
+      * 画一条一个实点一个空点的虚线
+      * 画一条两个实点两个空点的虚线
+      * 画一条三个实点两个空点的虚线
+      * 画一条45度的斜线
+      * 画一条30度的斜线（与x轴或y轴的夹角呈30度）
+      * 画一条跨越画布左上角和右下角的对角线
+      * 画一个空心矩形
+      * 画一个实心矩形
+      * 画两个个空心的圆，居中：
+        * 一个半径为50像素
+        * 一个半径为200像素
+      * 画一个实心的圆，半径至少为100像素
+      * 画一个【大小合适】的sin(x)的图像
+
+      * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+         'rgb(255,255,0)'
+         '#ff00ff'
+        如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2,0,0,2)或(1,0.27得到新的位置，即绘制出被线性变幻后的色彩空间某一面
+        可以考虑如下几种矩阵：
+           2 0
+           0 2
+           ------
+           1  0.27
+           0  1
+           ------
+           0.5    0.87
+           -0.87  0.5
+
+   */
+  </script>
+  <script>
+    // 不可更改上面的代码
+    // 你的代码写在这里
+    // 在 坐标 (42, 42) 画出一个点      *
+    dot(42, 42);
+    // 画一条实线
+    function horizontalLine(pixelLong, distanceFromTop = 1) {
+      for (let i = 1; i <= pixelLong; i++) {
+        dot(i, distanceFromTop);
+      }
+    }
+    horizontalLine(500, 300);
+
+    // 画一条一个实点一个空点的虚线
+    function dottedLine(pixelLong, distancceFromTop = 1) {
+      for (let i = 1; i <= pixelLong; i += 2) {
+        dot(i, distancceFromTop);
+      }
+    }
+    dottedLine(340, 318);
+
+    // 画一条两个实点两个空点的虚线
+
+    function dottedLineWithTwoSpace(pixelLong, distancceFromTop = 1) {
+      for (let i = 1; i <= pixelLong; i += 4) {
+        dot(i, distancceFromTop);
+        dot(i + 1, distancceFromTop);
+      }
+    }
+    dottedLineWithTwoSpace(425, 321);
+
+    // 画一条三个实点两个空点的虚线
+    function dottedLine_2_3(pixelLong, distancceFromTop = 1) {
+      for (let i = 1; i <= pixelLong; i += 5) {
+        dot(i, distancceFromTop);
+        dot(i + 1, distancceFromTop);
+        dot(i + 2, distancceFromTop);
+      }
+    }
+    dottedLine_2_3(425, 325);
+
+    // 画一条45度的斜线
+    function $45DegreeLine(startHorizontalPoint, startVerticalPoint) {
+      for (let i = startHorizontalPoint; i <= 500; i++) {
+        dot(i, startVerticalPoint);
+        startVerticalPoint--;
+        //if (startVerticalPoint === 0) break;
+      }
+    }
+    $45DegreeLine(3, 200);
+
+    // 画一条30度的斜线（与x轴或y轴的夹角呈30度）
+    function $30DegreeLine(startHorizontalPoint, startVerticalPoint) {
+      for (let i = startHorizontalPoint; i <= 500; i += 2) {
+        dot(i, startVerticalPoint);
+        startVerticalPoint--;
+        //if (startVerticalPoint === 0) break;
+      }
+    }
+    $30DegreeLine(3, 200);
+
+    // 画一条跨越画布左上角和右下角的对角线
+    function topLeftToBottomRight() {
+      for (let i = 0; i <= 500; i++) {
+        if ((0.8 * i) % 1 === 0) {
+          dot(i, i * 0.8);
+        }
+      }
+    }
+    topLeftToBottomRight();
+
+    // 画一个空心矩形
+    function hollowRect(
+      startHorizontalPoint,
+      startVerticalPoint,
+      width,
+      height
+    ) {
+      for (
+        let i = startHorizontalPoint;
+        i <= width + startHorizontalPoint;
+        i++
+      ) {
+        for (
+          let j = startVerticalPoint;
+          j <= height + startVerticalPoint;
+          j++
+        ) {
+          if (
+            i === startHorizontalPoint ||
+            i === startHorizontalPoint + width ||
+            j === startVerticalPoint ||
+            j === startVerticalPoint + height
+          ) {
+            dot(i, j);
+          }
+        }
+      }
+    }
+    hollowRect(4, 4, 200, 300);
+
+    // 画一个实心矩形
+
+    function Rect(startHorizontalPoint, startVerticalPoint, width, height) {
+      for (
+        let i = startHorizontalPoint;
+        i <= width + startHorizontalPoint;
+        i++
+      ) {
+        for (
+          let j = startVerticalPoint;
+          j <= height + startVerticalPoint;
+          j++
+        ) {
+          dot(i, j);
+        }
+      }
+    }
+    Rect(100, 50, 50, 40);
+
+    // 画两个个空心的圆，居中：
+    // 一个半径为50像素
+    function drawAcircle(r) {
+      for (let i = 250 - r; i <= 250 + r; i++) {
+        let m = Math.sqrt(r ** 2 - (250 - i) ** 2);
+        //if (m % 1 === 0) {
+        dot(i, 200 - m);
+        dot(i, 200 + m);
+        //}
+      }
+    }
+    drawAcircle(50);
+    // 一个半径为200像素
+    drawAcircle(200);
+    // 画一个实心的圆，半径至少为100像素
+    function drawAfilledCircle(a, b, r) {
+      for (let i = a - r; i <= a + r; i++) {
+        let m = Math.sqrt(r ** 2 - (a - i) ** 2);
+        for (let j = b - m; j <= b + m; j++) {
+          dot(i, j);
+        }
+        //if (m % 1 === 0) {
+        // dot(i, 200 - m);
+        // dot(i, 200 + m);
+        //}
+      }
+    }
+    drawAfilledCircle(305, 295, 101);
+    // 画一个【大小合适】的sin(x)的图像
+    function drawAsin(a, b) {
+      for (let i = 1; i <= 500; i++) {
+        let vertical = b + Math.sin((1 / 15) * i) * 50;
+        dot(i + a, vertical);
+      }
+    }
+    drawAsin(10, 100);
+
+    // YOUR CODE GOES BELOW
+  </script>
+</html>
