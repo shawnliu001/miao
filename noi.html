@@ -31,7 +31,6 @@
   };
   haha(Number(prompt()), Number(prompt()));
 </script>
--->
 
 <script id="ch0103/05">
   const a = Number(prompt());
@@ -158,4 +157,412 @@
   const n = Number(prompt());
   const product = 2 ** n;
   console.log(product);
+</script>
+
+<script id="ch0104/01">
+  const n = Number(prompt());
+  if (n > 0) console.log("positive");
+  else if (n === 0) console.log("zero");
+  else console.log("negative");
+</script>
+
+<script id="ch0104/02">
+  const n = Number(prompt());
+  if (n > 0) console.log(n);
+  else if (n === 0) console.log(0);
+  else console.log(-n);
+</script>
+
+<script id="ch0104/03">
+  const n = Number(prompt());
+  if (n % 2 === 0) console.log("even");
+  else console.log("odd");
+</script>
+
+<script id="ch0104/04">
+  const n = prompt();
+  const index = n.charCodeAt(0);
+  if (index % 2 === 0) console.log("NO");
+  else console.log("YES");
+</script>
+
+<script id="ch0104/05">
+  const n = Number(prompt());
+  const m = Number(prompt());
+  if (n > m) console.log(">");
+  else if (n === m) console.log("=");
+  else console.log("<");
+</script>
+
+<script id="ch0104/06">
+  const n = Number(prompt());
+  if (n >= 10 && n <= 99) console.log(1);
+  else if (n === m) console.log("=");
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/08">
+  const n = Number(prompt());
+  if (n %5 === 1 && consolation / ) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/08">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  elsec0(0);
+</script>
+
+<script id="ch0104/07">
+  const luck = Number(prompt());
+  const consolation = Number(prompt());
+  if (luck / 10 > 1 || consolation / 20 > 1) console.log(1);
+  else console.log(0);
+</script>
+
+<script id="ch0105/01">
+  const n = Number(prompt());
+  let input;
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    input = Number(prompt());
+    sum = sum + input;
+  }
+  const average = sum / n;
+  console.log(average.toFixed(2));
+</script>
+<script id="ch0105/02">
+  let sum = 0;
+  let input;
+  for (let i = 1; i <= 12; i++) {
+    input = Number(prompt());
+    sum += input;
+  }
+  let average = sum / 12;
+  console.log("$" + average.toFixed(2));
+</script>
+<script id="ch0105/04">
+  const n = Number(prompt());
+  let input;
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    input = Number(prompt());
+    sum = sum + input;
+  }
+  const average = sum / n;
+  console.log(sum, average.toFixed(5));
+</script>
+<script id="ch0105/06">
+  const n = Number(prompt());
+  const arr = [];
+  let input;
+
+  for (let i = 1; i <= n; i++) {
+    input = Number(prompt());
+    arr.push(input);
+  }
+
+  let min = arr[0];
+  let max = arr[0];
+
+  for (let i = 1; i < n; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  console.log(max - min);
+</script>
+<script id="ch0105/07">
+  const n = Number(prompt());
+  const arrGold = [];
+  const arrSilv = [];
+  const arrBronz = [];
+  let sumMedal = 0,
+    sumGold = 0,
+    sumSilv = 0,
+    sumBronz = 0;
+
+  for (let i = 0; i < n; i++) {
+    arrGold.push(Number(prompt()));
+    arrSilv.push(Number(prompt()));
+    arrBronz.push(Number(prompt()));
+  }
+
+  for (let i = 0; i < 3; i++) {
+    sumGold += arrGold[i];
+    sumSilv += arrSilv[i];
+    sumBronz += arrBronz[i];
+  }
+  sumMedal = sumGold + sumSilv + sumBronz;
+  console.log(sumGold, sumSilv, sumBronz, sumMedal);
+</script>
+<script id="ch0105/08">
+  const n = Number(prompt());
+  const arr = [];
+  let sumInteriorAngle = 0;
+  let lastInteriorAngle;
+  for (let i = 1; i <= n - 1; i++) {
+    interiorAngle = Number(prompt());
+    sumInteriorAngle += interiorAngle;
+  }
+  console.log((n - 2) * 180 - sumInteriorAngle);
+</script>
+<script id="ch0105/09">
+  const n = Number(prompt());
+  const m = Number(prompt());
+  let sumOdd = 0;
+  for (let i = n; i <= m; i += 2) {
+    if (i % 2 !== 0) {
+      sumOdd += i;
+    }
+  }
+  console.log(sumOdd);
+</script>
+<script id="ch0105/11">
+  const k = Number(prompt());
+  const arr = [];
+  for (let i = 1; i <= k; i++) {
+    arr.push(Number(prompt()));
+  }
+  let occurence1 = 0,
+    occurence5 = 0,
+    occurence10 = 0;
+  for (let i = 0; i < arr.length; i++) {
+    switch (arr[i]) {
+      case 1:
+        occurence1 += 1;
+        break;
+      case 5:
+        occurence5 += 1;
+        break;
+      case 10:
+        occurence10 += 1;
+    }
+  }
+  console.log(occurence1, occurence5, occurence10);
+</script>
+<script id="ch0105/16">
+  const N = Number(prompt());
+  const K = Number(prompt());
+  let savings = 0;
+  let houseingPrice = 200;
+  for (var i = 1; i <= 20; i++) {
+    savings += N;
+    if (savings >= houseingPrice) {
+      console.log(i);
+      break;
+    }
+    houseingPrice *= 1 + K / 100;
+  }
+  if (i > 20) {
+    console.log("Impossible");
+  }
+</script>
+<script id="ch0105/17">
+  const K = Number(prompt());
+  let curr1 = 1,
+    curr2 = 1,
+    curr;
+  for (let i = 3; i <= K; i++) {
+    curr = curr1 + curr2;
+    curr1 = curr2;
+    curr2 = curr;
+  }
+  console.log(curr);
+</script>
+<script id="ch0105/18">
+  const n = Number(prompt());
+  const cockTailAll = Number(prompt());
+  const cockTailEffective = Number(prompt());
+  const percentCocktail = Math.trunc((cockTailEffective / cockTailAll) * 100);
+  let casesAll, casesEffective;
+  for (let i = 1; i < n; i++) {
+    casesAll = Number(prompt());
+    casesEffective = Number(prompt());
+    var percent = Math.trunc((casesEffective / casesAll) * 100);
+    if (percent - percentCocktail > 5) {
+      console.log("better");
+    } else if (percent - percentCocktail < -5) {
+      console.log("worse");
+    } else {
+      console.log("same");
+    }
+  }
+</script>
+<script id="ch0105/01"></script>
+
+<script id="ch0105/06">
+  const n = Number(prompt("n"));
+  const arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(Number(prompt(`a${i}`)));
+  }
+
+  let max = arr[0];
+  let min = arr[0];
+  for (let j = 1; j < arr.length; j++) {
+    if (max < arr[j]) {
+      max = arr[j];
+    }
+
+    if (min > arr[j]) {
+      min = arr[j];
+    }
+  }
+  console.log(max - min);
+</script>
+
+<script id="ch0105/42">
+  "use strict";
+  const arr = [];
+  for (let i = 0; i < 4; i++) {
+    arr.push(prompt());
+  }
+
+  if (arr[3] === "1") {
+    let str = "";
+    for (let j = 0; j < Number(arr[0]); j++) {
+      for (let k = 0; k < Number(arr[1]); k++) {
+        str += arr[2];
+      }
+      str += "\n";
+    }
+    //  console.log(str);
+  }
+
+  if (arr[3] === "0") {
+    let str = "";
+    for (let i = 0; j < Number(arr[0]); j++) {
+      for (let j = 0; k < Number(arr[1]); k++) {
+        if (
+          j === 0 ||
+          j === Number(arr[0]) - 1 ||
+          k === 0 ||
+          k === Number(arr[1]) - 1
+        ) {
+          str += arr[2];
+        } else {
+          str += " ";
+        }
+      }
+      str += "\n";
+    }
+    //console.log(str);
+  }
+  console.log(str);
+</script>
+
+<script id="ch0105/43">
+  const n = Number(prompt("n"));
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      console.log(n / i);
+      break;
+    }
+  }
+</script>
+
+<script id="ch0105/44">
+  debugger;
+  function isPrime(n) {
+    for (let i = 2; i < n; i++) {
+      if (n % i === 0) return false;
+    }
+    return true;
+  }
+
+  const n = Number(prompt("n"));
+  let i = 3;
+  const arr = [2]; //从小到大生成一个n个质数元素的数组，2为首个质素元素
+  while (arr.length <= n) {
+    //判断数组的长度不超过n
+    if (isPrime(i)) {
+      arr.push(i);
+      i++;
+    } else {
+      i++;
+    }
+  }
+  console.log(arr[n - 1]); //输出最后一个元素即为
+</script>
+
+<script>
+  const n = Number(prompt("n"));
+  //从第一天开始
+  let day = 1;
+  while (i <= n) {
+    //将工资相同的日期归为同一个工资周期。判断有多少个完整的工资周期。
+  }
+</script>
+
+<script>
+  function reachTen() {}
 </script>
