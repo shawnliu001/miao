@@ -31,4 +31,10 @@ var shawnliu001 = {
       return containerArr;
     }
   },
+
+  // [null, 0, 'dkj', +'ldfj', [], undefined, NaN, '', true, false]
+  compact: function (arr) {
+    let compacted = arr.filter((el) => el && true);
+    return compacted;
+  },
 };
