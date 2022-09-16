@@ -9,7 +9,7 @@ var shawnliu001 = {
         for (let j = newRoundIndex; j < arr.length; j++) {
           containerArr[i].push(arr[j]);
           if (containerArr[i].length === size) {
-            newRoundIndex += size - 1;
+            newRoundIndex += size;
             break;
           }
         }
@@ -23,7 +23,7 @@ var shawnliu001 = {
         for (let j = newRoundIndex; j < arr.length; j++) {
           containerArr[i].push(arr[j]);
           if (containerArr[i].length === size) {
-            newRoundIndex += size - 1;
+            newRoundIndex += size;
             break;
           }
         }
@@ -36,5 +36,37 @@ var shawnliu001 = {
   compact: function (arr) {
     let compacted = arr.filter((el) => el && true);
     return compacted;
+  },
+
+  concat: function (arr, ...values) {
+    for (let i = 0; i < values.length; i++) {
+      if (Array.isArray(values[i])) {
+        values[i].forEach((el) => arr.push(el));
+      } else {
+        arr.push(values[i]);
+      }
+    }
+    return arr;
+  },
+
+  drop: function (arr, drop_by = 1) {
+    let = difference = arr.length - drop_by;
+    if (difference <= 0) return [];
+    for (let i = 1; i <= drop_by; i++) {
+      arr.shift();
+    }
+    return arr;
+  },
+
+  flatten: function (arr) {
+    let newContainerArray = new Array();
+    for (let i = 0; i < arr.length; i++) {
+      if (Array.isArray(arr[i])) {
+        arr[i].forEach((el) => newContainerArray.push(el));
+      } else {
+        newContainerArray.push(arr[i]);
+      }
+    }
+    return newContainerArray;
   },
 };
